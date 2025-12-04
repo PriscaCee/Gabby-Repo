@@ -3,35 +3,26 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>PrimeHomes - Find Your Dream Property</title>
-  <meta name="description" content="Discover your perfect home with PrimeHomes - Luxury apartments, family houses, and investment properties."/>
+  <title>PriscaHomes - Find Your Dream Property in Enugu</title>
+  <meta name="description" content="Discover luxury apartments, modern villas, and family homes in Enugu's finest locations with PriscaHomes."/>
 
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
-
-  <!-- Icons (Font Awesome) -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
 
   <style>
     :root {
-      --primary: #2563eb;
-      --primary-dark: #1d4ed8;
+      --primary: #c2410c;      /* Warm orange – premium Nigerian feel */
+      --primary-dark: #9a3412;
       --secondary: #64748b;
       --light: #f8fafc;
       --dark: #1e293b;
-      --success: #10b981;
     }
 
     * { margin: 0; padding: 0; box-sizing: border-box; }
-    body {
-      font-family: 'Inter', sans-serif;
-      line-height: 1.6;
-      color: var(--dark);
-      background-color: #fff;
-    }
+    body { font-family: 'Inter', sans-serif; line-height: 1.6; color: var(--dark); background:#fff; }
     h1, h2, h3, h4 { font-family: 'Playfair Display', serif; }
 
-    /* Header & Navigation */
     header {
       background: rgba(255,255,255,0.95);
       backdrop-filter: blur(10px);
@@ -50,11 +41,15 @@
       align-items: center;
     }
     .logo {
+      display: flex;
+      align-items: center;
+      gap: 12px;
       font-size: 2rem;
       font-weight: 700;
       color: var(--primary);
       text-decoration: none;
     }
+    .logo svg { width: 50px; height: 50px; }
     .nav-links a {
       margin-left: 2rem;
       text-decoration: none;
@@ -64,10 +59,9 @@
     }
     .nav-links a:hover { color: var(--primary); }
 
-    /* Hero Section */
     .hero {
       height: 100vh;
-      background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?ixlib=rb-4.0.3&auto=format&fit=crop&q=80');
+      background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-4.0.3&auto=format&fit=crop&q=80');
       background-size: cover;
       background-position: center;
       display: flex;
@@ -77,19 +71,9 @@
       color: white;
       margin-top: -80px;
     }
-    .hero-content {
-      max-width: 900px;
-      padding: 2rem;
-    }
-    .hero h1 {
-      font-size: 4.5rem;
-      margin-bottom: 1rem;
-    }
-    .hero p {
-      font-size: 1.3rem;
-      margin-bottom: 2rem;
-      opacity: 0.9;
-    }
+    .hero-content { max-width: 900px; padding: 2rem; }
+    .hero h1 { font-size: 4.5rem; margin-bottom: 1rem; }
+    .hero p { font-size: 1.3rem; margin-bottom: 2rem; opacity: 0.9; }
     .btn {
       display: inline-block;
       padding: 1rem 2.5rem;
@@ -103,98 +87,47 @@
     .btn:hover {
       background: var(--primary-dark);
       transform: translateY(-3px);
-      box-shadow: 0 10px 20px rgba(37,99,235,0.3);
+      box-shadow: 0 10px 20px rgba(194,65,12,0.3);
     }
 
-    /* Featured Properties */
-    .featured {
-      padding: 100px 2rem;
-      background: var(--light);
-      text-align: center;
-    }
-    .container {
-      max-width: 1400px;
-      margin: 0 auto;
-    }
-    .section-title {
-      font-size: 3rem;
-      margin-bottom: 1rem;
-      color: var(--dark);
-    }
-    .section-subtitle {
-      font-size: 1.2rem;
-      color: var(--secondary);
-      margin-bottom: 4rem;
-    }
-    .properties-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-      gap: 2rem;
-    }
-    .property-card {
-      background: white;
-      border-radius: 16px;
-      overflow: hidden;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-      transition: transform 0.3s;
-    }
-    .property-card:hover {
-      transform: translateY(-10px);
-    }
-    .property-card img {
-      width: 100%;
-      height: 250px;
-      object-fit: cover;
-    }
-    .property-info {
-      padding: 1.5rem;
-    }
-    .price {
-      font-size: 1.8rem;
-      font-weight: 700;
-      color: var(--primary);
-      margin-bottom: 0.5rem;
-    }
-    .location {
-      color: var(--secondary);
-      margin-bottom: 1rem;
-      display: flex;
-      align-items: center;
-      gap: 0.5rem;
-    }
-    .features {
-      display: flex;
-      gap: 1rem;
-      color: var(--secondary);
-      font-size: 0.95rem;
-    }
+    .featured { padding: 100px 2rem; background: var(--light); text-align: center; }
+    .container { max-width: 1400px; margin: 0 auto; }
+    .section-title { font-size: 3rem; margin-bottom: 1rem; color: var(--dark); }
+    .section-subtitle { font-size: 1.2rem; color: var(--secondary); margin-bottom: 4rem; }
+    .properties-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 2rem; }
+    .property-card { background: white; border-radius: 16px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.1); transition: transform 0.3s; }
+    .property-card:hover { transform: translateY(-10px); }
+    .property-card img { width: 100%; height: 250px; object-fit: cover; }
+    .property-info { padding: 1.5rem; }
+    .price { font-size: 1.8rem; font-weight: 700; color: var(--primary); margin-bottom: 0.5rem; }
+    .location { color: var(--secondary); margin-bottom: 1rem; display: flex; align-items: center; gap: 0.5rem; }
+    .features { display: flex; gap: 1rem; color: var(--secondary); font-size: 0.95rem; }
 
-    /* Footer */
-    footer {
-      background: var(--dark);
-      color: white;
-      padding: 4rem 2rem 2rem;
-      text-align: center;
-    }
-    .footer-links a {
-      color: #cbd5e1;
-      margin: 0 1rem;
-      text-decoration: none;
-    }
+    footer { background: var(--dark); color: white; padding: 4rem 2rem 2rem; text-align: center; }
+    .footer-links a { color: #cbd5e1; margin: 0 1rem; text-decoration: none; }
     .footer-links a:hover { color: var(--primary); }
 
     @media (max-width: 768px) {
       .hero h1 { font-size: 3rem; }
-      .nav-links { display: none; } /* Simple mobile - you can add a hamburger later */
+      .nav-links { display: none; }
     }
   </style>
 </head>
 <body>
 
-  <!-- Navigation -->
+  <!-- Navigation with PH House Logo -->
   <header>
     <nav>
-      <a href="#" class="logo">PrimeHomes</a>
+      <a href="#" class="logo">
+        <!-- PH House Logo SVG -->
+        <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+          <path d="M20 80 L50 20 L80 80 Z" fill="none" stroke="#c2410c" stroke-width="12"/>
+          <path d="M35 55 L35 80 M65 55 L65 80" stroke="#c2410c" stroke-width="10"/>
+          <text x="36" y="68" font-family="Arial Black" font-size="38" fill="#c2410c">P</text>
+          <text x="52" y="68" font-family="Arial Black" font-size="38" fill="#c2410c">H</text>
+        </svg>
+        PriscaHomes
+      </a>
       <div class="nav-links">
         <a href="#">Buy</a>
         <a href="#">Rent</a>
@@ -208,25 +141,25 @@
   <!-- Hero Section -->
   <section class="hero">
     <div class="hero-content">
-      <h1>Find Your Dream Home Today</h1>
-      <p>Discover luxury apartments, modern villas, and perfect family houses in the best locations.</p>
+      <h1>Find Your Dream Home in Enugu</h1>
+      <p>Discover luxury apartments, modern villas, and perfect family houses in Enugu's finest locations.</p>
       <a href="#" class="btn">Explore Properties →</a>
     </div>
   </section>
 
-  <!-- Featured Properties -->
+  <!-- Featured Properties (Enugu Edition) -->
   <section class="featured">
     <div class="container">
       <h2 class="section-title">Featured Properties</h2>
-      <p class="section-subtitle">Hand-picked homes just for you</p>
+      <p class="section-subtitle">Hand-picked homes in Enugu just for you</p>
 
       <div class="properties-grid">
         <!-- Property 1 -->
         <div class="property-card">
           <img src="https://images.unsplash.com/photo-1613490493576-7fde63acd811?ixlib=rb-4.0.3&auto=format&fit=crop&q=80" alt="Luxury Villa">
           <div class="property-info">
-            <div class="price">$1,250,000</div>
-            <div class="location"><i class="fas fa-map-marker-alt"></i> Beverly Hills, CA</div>
+            <div class="price">₦1,840,000,000</div>
+            <div class="location"><i class="fas fa-map-marker-alt"></i> Independence Layout, Enugu</div>
             <h3>Luxury Modern Villa</h3>
             <div class="features">
               <span><i class="fas fa-bed"></i> 5 Beds</span>
@@ -240,8 +173,8 @@
         <div class="property-card">
           <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-4.0.3&auto=format&fit=crop&q=80" alt="Family House">
           <div class="property-info">
-            <div class="price">$785,000</div>
-            <div class="location"><i class="fas fa-map-marker-alt"></i> Austin, TX</div>
+            <div class="price">₦1,150,000,000</div>
+            <div class="location"><i class="fas fa-map-marker-alt"></i> Centenary City, Enugu</div>
             <h3>Family Dream House</h3>
             <div class="features">
               <span><i class="fas fa-bed"></i> 4 Beds</span>
@@ -253,10 +186,10 @@
 
         <!-- Property 3 -->
         <div class="property-card">
-          <img src="https://images.unsplash.com/photo-1568605114967-8130f3a36994?ixlib=rb-4.0.3&auto=format&fit=crop&q=80" alt="Downtown Apartment">
+          <img src="https://images.unsplash.com/photo-1568605114967-8130f3a36994?ixlib=rb-4.0.3&auto=format&fit=crop&q=80" alt="Penthouse">
           <div class="property-info">
-            <div class="price">$520,000</div>
-            <div class="location"><i class="fas fa-map-marker-alt"></i> Manhattan, NY</div>
+            <div class="price">₦760,000,000</div>
+            <div class="location"><i class="fas fa-map-marker-alt"></i> New GRA, Enugu</div>
             <h3>Penthouse Downtown</h3>
             <div class="features">
               <span><i class="fas fa-bed"></i> 2 Beds</span>
@@ -272,7 +205,7 @@
   <!-- Footer -->
   <footer>
     <div class="container">
-      <p style="font-size:1.5rem; margin-bottom:1rem;">PrimeHomes</p>
+      <p style="font-size:1.5rem; margin-bottom:1rem;">PriscaHomes</p>
       <div class="footer-links">
         <a href="#">About</a>
         <a href="#">Properties</a>
@@ -280,7 +213,7 @@
         <a href="#">Blog</a>
         <a href="#">Contact</a>
       </div>
-      <p style="margin-top:2rem; opacity:0.7;">© 2025 PrimeHomes. All rights reserved.</p>
+      <p style="margin-top:2rem; opacity:0.7;">© 2025 PriscaHomes • Built & deployed on AWS S3 by PriscaCee</p>
     </div>
   </footer>
 
