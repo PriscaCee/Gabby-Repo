@@ -1,6 +1,6 @@
 # PriscaHomes – My Real Estate Website.
 
-*Live on AWS S3 (HTTPS) →* https://primehomes-priscacee-2025.s3.eu-north-1.amazonaws.com/index.html  
+*Live on AWS S3 (HTTPS) →* https://priscahomes-2025.s3.eu-north-1.amazonaws.com/index.html  
 *GitHub Pages version →* https://priscacee.github.io/Gabby-Repo/
 
 A fully responsive real estate landing page I designed myself and directed Grok (xAI) to build it according to my exact specifications.
