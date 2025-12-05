@@ -119,6 +119,7 @@ json
  - HTTPS (secured):       https://priscahomes-2025.s3.eu-north-1.amazonaws.com/index.html  
   
  - HTTP endpoint:   http://priscahomes-2025.s3-website.eu-north-1.amazonaws.com  
+<img width="1366" height="768" alt="Live-Website" src="https://github.com/user-attachments/assets/531555d6-1137-4a69-a758-bf1a18427680" />
 
 *Note on Public Access Method*  
 I used the *bucket policy (JSON)* method to make the site public — not the older ACL method.  
