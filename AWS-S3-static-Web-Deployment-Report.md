@@ -60,19 +60,20 @@ As a learner on my path to AWS Certified Solutions Architect with TechCrush, web
 
 ### Step-by-Step Deployment Process.
 
-1. *Logged into my AWS Console*  
+1. **Logged into my AWS Console**  
    I opened https://aws.amazon.com, signed in with my Free Tier account.
 
 2. *Went to S3*  
    Typed “S3” in the search bar at the top - clicked *Amazon S3*.
 
-3. *Created the bucket*  
+3. **Created the bucket**  
    - Clicked the  *Create bucket* button.
    - Bucket name: priscahomes-2025 (I had to make sure it was unique). 
    - Region: eu-north-1.
    - Scrolled down - *“Unblocked all public access”*  
    - l ticked the small box that says “I acknowledge…”  
    - Clicked *Create bucket*
+<img width="1366" height="768" alt="Bucket-creation" src="https://github.com/user-attachments/assets/036d6314-03fb-48d5-a51e-66eb0994077e" />
 
 4. **Uploaded my index.html**  
    - Clicked on the bucket name priscahomes-2025  
@@ -80,15 +81,17 @@ As a learner on my path to AWS Certified Solutions Architect with TechCrush, web
    - Dragged my final index.html from my laptop and dropped it  
    - Clicked *Upload* → waited → clicked *Close*
 
-5. *Turned on Static Website Hosting*  
+<img width="1366" height="768" alt="index-file-upload" src="https://github.com/user-attachments/assets/4608ff6b-577b-4f74-86c9-77367fce9a35" />
+5. **Turned on Static Website Hosting**  
    - Inside the bucket → clicked the *Properties* tab  
    - Scrolled all the way down until I saw *Static website hosting*  
    - Clicked *Edit* → chose *Enable*  
    - Typed index.html in the Index document box  
    - Clicked *Save changes*  
    - Copied the endpoint that appeared (http://priscahomes-2025.s3-website.eu-north-1.amazonaws.com)
+<img width="1366" height="768" alt="AWS-Static-Web-Hosting" src="https://github.com/user-attachments/assets/d13f050c-1fab-4092-8bac-d12e3c13dcf4" />
 
-6. *Made the bucket public. Then I got an error message the first time*  
+6. **Made the bucket public. Then I got an error message the first time**  
    - Clicked the *Permissions* tab  
    - Scrolled to *Bucket policy* - clicked *Edit*  
  - Pasted this exact JSON:
@@ -110,8 +113,9 @@ json
 
    - Clicked *Save changes*  
    - The 403 error message disappeared after this and l was able to access my site.
+<img width="1366" height="768" alt="Bucket-Policy" src="https://github.com/user-attachments/assets/d108aad6-e472-429f-9aa8-06a0b94676a4" />
 
-7. *Got my final live links*  
+7. **Got my final live links**  
  - HTTPS (secured):       https://priscahomes-2025.s3.eu-north-1.amazonaws.com/index.html  
   
  - HTTP endpoint:   http://priscahomes-2025.s3-website.eu-north-1.amazonaws.com  
@@ -120,7 +124,7 @@ json
 I used the *bucket policy (JSON)* method to make the site public — not the older ACL method.  
 This is the current AWS-recommended best practice and gives cleaner, more reliable control.
 
-JSON is a clear command of:
+*JSON is a clear command of:*
 Version: tells AWS which policy language to use (2012 format).
 Effect: "Allow": gives permission (not deny).
 Principal: "*": means “everybody on the internet”.
